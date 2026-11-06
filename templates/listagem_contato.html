@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<div class="main_listagem">
+    <h1>Lista de contato</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+
+        <body>
+            {% for contato in contatos %}
+            <tr>
+                <td>{{ contato.id }}</td>
+                <td>{{ contato.nome }}</td>
+                <td>{{ contato.telefone }}</td>
+                <td>{{ contato.email }}</td>
+                <td>{{ contato.mensagem }}</td>
+                <td><a class="botao" href="/alterar?id={{ contato.id }}">Alterar</a></td>
+                <td><a class="botao" href="/excluir?id={{ contato.id }}"
+                        onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a></td>
+            </tr>
+            {% endfor %}
+        </body>
+    </table>
+</div>
+{% endblock %}

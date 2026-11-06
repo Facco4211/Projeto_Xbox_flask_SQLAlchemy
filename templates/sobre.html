@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<div class="main_sobre">
+    <h1>Sobre</h1>
+    <p>Projetos</p>
+    {% if exibir %}
+    <ul>
+        {% for item in lista %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endblock %}

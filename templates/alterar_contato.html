@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<div class="main_alterar_contato">
+    <h1>ALteração de Contato</h1>
+    <form action="/alterar" method="POST">
+        <label for="id">Id:</label>
+        <input type="number" value="{{ contato.id }}" disabled>
+        <input type="hidden" id="id" name="id" value="{{ contato.id }}">
+        <label for="nome">* Nome</label>
+        <input type="text" id="nome" name="nome" maxlength="100" value="{{ contato.nome }}" required>
+        <label for="telefone">* Telefone</label>
+        <input type="text" id="telefone" name="telefone" maxlength="14" value="{{ contato.telefone }}" required>
+        <label for="email">* E-mail</label>
+        <input type="email" id="email" name="email" maxlength="100" value="{{ contato.email }}" required>
+        <label for="mensagem">* Mensagem</label>
+        <textarea cols="100" rows="3" id="mensagem" name="mensagem" maxlength="200"
+            required>{{contato.mensagem}}</textarea>
+        <button class="botao">Enviar</button>
+    </form>
+</div>
+{% endblock %}

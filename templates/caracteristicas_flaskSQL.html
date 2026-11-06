@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<div class="banner_listagem">
+    <img src="/static/images/batalha_listagem.png" alt="">
+</div>
+<div class="main_caracteristicas">
+    <h1>Caracteristicas</h1>
+    <h2>Flask & SQLAlchemy</h2>
+    <p>A combinação do Flask na camada web com o SQLAlchemy no banco de dados entrega controle total,
+        alta performance e desenvolvimento ágil.</p>
+
+    <h3>1. Flask (Web Framework)</h3>
+    <p>O Flask é um microframework minimalista. Ele entrega o básico para rodar a aplicação e deixa a arquitetura livre.
+    </p>
+    <h4>Principais Vantagens</h4>
+    <ul>
+        <li><strong>Estrutura livre:</strong> Sem pastas ou padrões obrigatórios; você organiza o projeto como quiser.
+        </li>
+        <li><strong>Sem código inútil:</strong> Ele vem limpo. Você só instala as extensões que realmente precisa.</li>
+        <li><strong>Curva de aprendizado rápida:</strong> Fácil de entender e ótimo para colocar ideias ou APIs no ar em
+            poucos minutos.</li>
+        <li><strong>Ideal para APIs:</strong> Excelente escolha para backends leves, microsserviços e integrações.</li>
+    </ul>
+
+    <h3>2. SQLAlchemy (ORM / Banco de Dados)</h3>
+    <p>O SQLAlchemy faz a ponte entre o Python e o banco de dados relacional, transformando tabelas em objetos Python.
+    </p>
+
+    <h4>Principais Vantagens</h4>
+    <ul>
+        <li><strong>Trabalhe com Objetos:</strong> Escreva código Python nativo em vez de consultas SQL manuais
+            repetitivas.</li>
+        <li><strong>Portabilidade de Banco:</strong> Mude de SQLite para PostgreSQL ou MySQL sem reescrever suas
+            consultas.</li>
+        <li><strong>Segurança Nativa:</strong> Proteção automática contra ataques de <em>SQL Injection</em>.</li>
+        <li><strong>Flexibilidade:</strong> Permite usar ORM para o dia a dia e SQL puro quando precisar de alta
+            otimização.</li>
+    </ul>
+
+    <h3>Resumo da Combinação</h3>
+    <p>O <strong>Flask</strong> garante a velocidade e a simplicidade na rota web. O <strong>SQLAlchemy</strong> garante
+        a segurança e a organização nos dados. É a stack ideal para quem quer produtividade sem ficar preso a regras
+        engessadas.</p>
+</div>
+<div class="banner_listagem_bottom">
+    <img src="/static/images/batalha_listagem.png" alt="">
+</div>
+{% endblock %}
